@@ -5,9 +5,6 @@
 header{
     display: block;
 }
-label, input{
-    display: none;
-}
 .text{
     @include text(140%, "Myriad Pro", $redColor, normal, normal, normal, uppercase);
     padding: 4% 5%;
@@ -31,11 +28,12 @@ main{
 .yourcompanyname{
   @include size(509px, 31px);
   @include text(250%, Athelas,$redColor, 400, 1.2px, 30px, uppercase);
+    text-shadow: -1px 0px 1px $blackColor;
 }
 .menu{
     @include size(auto, 77px);
-    background-color: $blackColor;
-    opacity: 0.3;
+    background-color: #051a01;
+    opacity: 0.6;
     padding-left: 6%;
     font-size: 100%;
     font-family: "Myriad Pro";
@@ -49,13 +47,16 @@ main{
 a{
     text-decoration: none;
 }
+ input,label {
+  display: none;
+}
 .menu a{
     @include size(auto, inherit)
     @include flex (flex, row, center, center, left);
     @include text(medium, Athelas,$whiteColor, normal, normal, normal, uppercase);
 }
 .menu li:hover{
-    background: $blueColorOp;
+    background: rgba(126, 255, 0, 0.3);
 }
 .our-team-leaders{
     @include size(40%, auto);
@@ -75,7 +76,7 @@ a{
     margin: 7% 5% 3% 5%;
 }
 .img img{
-    @include size(80%, auto);
+    @include size(250px, auto);
     display: block;
     border: 1px solid transparent;
     background-size: cover;
@@ -107,7 +108,7 @@ li{
     @include flex (flex, row, space-evenly, stretch, left);
 }
 .number li{
-    @include text(300%, Vani, $redColor, 700,  normal, normal, uppercase);
+    @include text(300%, "Vani", $redColor, 700,  normal, normal, uppercase);
     display: block;
     float: left;
     padding-top: 3%;
@@ -124,6 +125,142 @@ li{
     border: 1px solid transparent;
     background: url(../img/point_2.jpg) no-repeat center / cover;
 }
+
+.section-4{
+    border: 1px solid $darkBlueColor;
+    background: radial-gradient($darkBlueColor_2, $darkBlueColor);
+
+}
+.contact{
+    @include text( 550%, Athelas, $whiteColor, 400,  1.2px, 131.13px, uppercase);
+    @include flex(flex, row, center, stretch, left);
+    padding: 10% 0 0 0;
+
+}
+.contact-text{
+    @include size(60%, auto);
+    @include text( 200%, "Quattrocento Sans", #c0c0c0, 400,  0.5px, 41.41px, none);
+    margin: 2% auto;
+    text-align: justify;
+}
+.line-1 input, .line-2 input,.line-3 input{
+  display: block;
+}
+.line-1, .line-2, .line-3, .line-4{
+    display: flex;
+    justify-content: space-around;
+    margin: 5%;
+}
+input[type="text"], [type="tel"], [type="email"], textarea, select{
+  border: 1px solid transparent;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  color: #737474;
+  font-size: 100%;
+  width: 40%;
+}
+input[type="email"], textarea{
+  width: 90%;
+}
+textarea{
+  font-size: 120%;
+
+}
+.button{
+  @include flex(flex, row, flex-end,stretch,left);
+  margin: 9% 17%;
+}
+.form button[type="submit"]{
+  @include text( 200%, "Myriad Pro", $whiteColor, 400,  0.6px, 30px, none);
+  @include size(155%, 210%)
+  border: 2px solid #623621;
+  background-color: #89553b;
+}
+
+.section-5{
+  @include flex(flex, row, flex-start,stretch,center);
+  @include size(auto, 1200px);
+
+}
+.section-5 .container{
+  @include flex(flex, row, space-evenly, center, left);
+}
+.art{
+  @include size(45%, auto);
+  background-size: cover;
+}
+.about-text{
+  @include size(45%, auto);
+  background-color: rgba(152, 120, 8, 0.15);
+  padding: 1% 0%;
+}
+.about{
+  @include text( 200%, Athelas, $blackColor, 400,  2.4px, 95px, uppercase);
+  @include flex(flex, row, center, stretch, left);
+}
+.Sed{
+  @include text( 120%,  "Quattrocento Sans", #3d3d3d, 400,  0.5px, 120%, none);
+  text-align: center;
+  padding: 0% 10%;
+}
+.circle img{
+  @include size(60%, 60%);
+  margin: 7% 0;
+  border-radius: 50%;
+}
+ button[type="submit"]{
+  @include text( 120%,  Athelas, $blackColor, 400,  2.4px, 150%, uppercase);
+  border: 2px solid $blackColor;
+  background: $whiteColor;
+}
+.img-circle{
+  @include flex(flex, row, flex-start, stretch, center);
+}
+.gallery{
+  @include size(40%, auto);
+  @include flex (flex, row, center, center, left);
+  margin: 8% auto 0%;
+  @include text(250%, Athelas, $redColor, 400, normal, normal, uppercase);
+}
+.our__text{
+@include size(60%, 50%);
+@include text(100%, Helvetica, $blackColor, 400, 0.9px, 25.46px, none);
+margin: 5% auto;
+text-align: justify;
+}
+.slide:focus {
+    outline: none;
+}
+
+#slider img{
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 95%;
+  height: 60vw;
+  background-size: cover;
+}
+.slider_prev, .slider_next{
+	padding: 5px 13px;
+	border-bottom:0;
+	font-size: 1.3em;
+	color: rgb(5, 5, 4);
+	background-color: #e2932c;
+	border-radius: 50%;
+  font-family: fantasy;
+  box-shadow: 0px 0px 13px 0px #ddac19;
+}
+.click{
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 5% 0% 5%;
+  padding: 1% 0;
+}
+.commands{
+  background-color: rgba(5, 5, 4, 0.9);
+}
+
+
 footer:before{
     @include size(100%, auto);
     position: fixed;

@@ -1,13 +1,16 @@
 @media (max-width: 1024px){
     .our-team-leaders{
-        font-size: 100%;
+        font-size: 110%;
         border-bottom: 1px solid;
+    }
+    .about, .gallery{
+      font-size: 110%;
     }
     .number li{
         font-size: 120%;
     }
-    .heroes, .menu, .text, .copyright__text{
-        font-size: 90%;
+    .heroes, .menu, .text,.lorem, .Sed, .copyright__text, .our__text{
+        font-size: 80%;
     }
     .heroes-description, .fa div, .lorem{
         font-size: 80%;
@@ -23,28 +26,49 @@
     .menu__item{
         font-size: 70%;
     }
-    .welcom{
+    .welcom, .contact{
 		font-size: 250%;
 	}
-	.yourcompanyname{
+	.yourcompanyname, .contact-text, .form button[type="submit"]{
 		font-size: 150%;
 	}
+  .section-5 .container{
+    display: flex;
+    flex-direction: column;
+  }
+  .art, .about-text{
+    @include size(100%, auto);
+  }
+  .form{
+      display: flex;
+      flex-direction: column;
+  }
 }
 
 @media (max-width: 768px){
+  .container-point{
+      @include size(auto, 700px);
+    }
 	input, .main__menu li {
 	    display: none;
 	}
 	label {
 	    cursor: pointer;
 	}
+  .contact{
+    font-size: 110%;
+  }
+  .contact-text{
+    font-size: 90%;
+    width: 75%;
+  }
   .welcom, .yourcompanyname{
       @include size(90%, auto);
   }
   .our-team-leaders{
       @include size(50%, auto);
   }
-  	.nav__showmenu {
+  .nav__showmenu {
 	    position: relative;
 	    z-index: 1;
 	    display: block;
@@ -73,6 +97,7 @@
 	}
 	.img, .heroes, .heroes-description{
       @include flex (flex, column, flex-start, stretch, left);
+      text-align: justify;
 	}
 	.heroes-description{
     @include size(100%, auto);
@@ -115,7 +140,34 @@
 	    font-size: 90%;
 	    padding-bottom: 4%;
 	}
-	.copyright__social{
+	.copyright__social, .section-5, .section-4{
       @include size(100%, auto);
 	}
+  .img-circle{
+    flex-direction: column;
+  }
+  .commands{
+    padding-bottom: 6%;
+  }
+  .line-1 input, .line-2 input,.line-3 input{
+    display: block;
+  }
+  input[type="text"], [type="tel"], [type="email"], textarea, select{
+    @include size(90%, auto);
+  }
+  select{
+    margin-top: 7%;
+  }
+  .line-1, .line-2, .line-3, .line-4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form button[type="submit"]{
+    font-size: 90%;
+      @include size(115%, 100%);
+  }
+  .commands{
+    padding-bottom: 6%;
+  }
 }
